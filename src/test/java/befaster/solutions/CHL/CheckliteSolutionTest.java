@@ -18,4 +18,3 @@ public class CheckliteSolutionTest {
         Integer checkoutValue = checkliteSolution.checklite(basket);
     }
 }
-

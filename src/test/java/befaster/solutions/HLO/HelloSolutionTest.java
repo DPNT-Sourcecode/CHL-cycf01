@@ -17,4 +17,3 @@ public class HelloSolutionTest {
         assertEquals(expectedMessage, returnedMessage);
     }
 }
-
