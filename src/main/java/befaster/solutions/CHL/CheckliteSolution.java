@@ -50,7 +50,7 @@ public class CheckliteSolution {
                 if(!quantityByItem.containsKey(sku)) {
                     quantityByItem.put(item, 0);
                 }
-                Integer quantityForThisSku = quantityByItem.get(sku);
+                Integer quantityForThisSku = quantityByItem.get(item);
                 quantityByItem.put(item, ++quantityForThisSku);
 
 
@@ -132,4 +132,5 @@ public class CheckliteSolution {
         return null;
     }
 }
+
 
