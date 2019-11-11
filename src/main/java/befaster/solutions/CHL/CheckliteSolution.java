@@ -8,7 +8,7 @@ public class CheckliteSolution {
     private static Item ITEM_B = new Item('B', 30);
     private static Item ITEM_C = new Item('C', 20);
     private static Item ITEM_D = new Item('D', 15);
-    //private static Item ITEM_E = new Item('E', 40);
+    private static Item ITEM_E = new Item('E', 40);
 
     private static SpecialOffer SPECIAL_OFFER_ITEM_A_1 = new SpecialOffer(5, 200, 1);
     private static SpecialOffer SPECIAL_OFFER_ITEM_A_2 = new SpecialOffer(3, 130, 2);
@@ -104,6 +104,7 @@ public class CheckliteSolution {
         return null;
     }
 }
+
 
 
 
