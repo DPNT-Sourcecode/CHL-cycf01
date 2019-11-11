@@ -96,15 +96,17 @@ public class CheckliteSolution {
 
     private Integer totalForItem(Item item, int quantity) {
         int total = 0;
-        int numberOfItemsLeft = quantity;
+        int numberOfItemUnitsLeft = quantity;
         SpecialOffer bestOfferApplicable;
         do {
             bestOfferApplicable = getBestOfferApplicableFor(item, quantity);
-            numberOfItemsLeft -= bestOfferApplicable.getQuantity();
-            total += bestOfferApplicable.getPrice();
+            if(bestOfferApplicable != null) {
+                numberOfItemUnitsLeft -= bestOfferApplicable.getQuantity();
+                total += bestOfferApplicable.getPrice();
+            }
         } while (bestOfferApplicable != null);
 
-        return total + numberOfItemsLeft * item.getPrice();
+        return total + numberOfItemUnitsLeft * item.getPrice();
     }
 
     /*
@@ -121,10 +123,13 @@ public class CheckliteSolution {
             Collections.sort(specialOffers);
 
             for(SpecialOffer specialOffer : specialOffers) {
-                
+                if(numberOfItems >= specialOffer.getQuantity()) {
+                    return specialOffer;
+                }
             }
         }
 
         return null;
     }
 }
+
