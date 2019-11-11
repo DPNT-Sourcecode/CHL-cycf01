@@ -13,10 +13,15 @@ import java.util.Set;
 public class CheckliteSolutionTest {
 
     @Parameterized.Parameters
-    public static Iterable<Object[]> {
-        return Arrays.asList(new Object[]) {
-            
-        }
+    public static Iterable<Object[]> data() {
+        return Arrays.asList(new Object[][] {
+            {"A", Integer.valueOf(50)},
+            {"ABCD", Integer.valueOf(115)},
+            {"AAA", Integer.valueOf(130)},
+                {"AAAAA", Integer.valueOf(200)},
+                {null, Integer.valueOf(-1)},
+                {"!", Integer.valueOf(-1)}
+        });
     }
 
     private CheckliteSolution checkliteSolution;
@@ -66,14 +71,6 @@ public class CheckliteSolutionTest {
     }
 
     @Test
-    public void shouldCalculateItemTotalWhenSpecialOfferAppliesToProductA() {
-        String basket = "AAAAA";
-        Integer checkoutValue = checkliteSolution.checklite(basket);
-
-        Assert.assertEquals(Integer.valueOf(200), checkoutValue);
-    }
-
-    @Test
     public void shouldCalculateItemTotalWhenSpecialOfferAppliesToProductB() {
         String basket = "BB";
         Integer checkoutValue = checkliteSolution.checklite(basket);
@@ -105,5 +102,6 @@ public class CheckliteSolutionTest {
         Assert.assertEquals(Integer.valueOf(-1), returnedValue);
     }
 }
+
 
 
