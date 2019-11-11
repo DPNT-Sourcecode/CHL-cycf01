@@ -15,9 +15,11 @@ public class CheckliteSolution {
     public Integer checklite(String skus) {
         for (int i = 0; i < skus.length(); i++) {
             char sku = skus.charAt(i);
+            catalog.
         }
     }
 }
+
 
 
 
