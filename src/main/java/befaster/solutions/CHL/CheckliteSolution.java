@@ -10,12 +10,13 @@ public class CheckliteSolution {
     private static Item ITEM_D = new Item('D', 15);
     private static Item ITEM_E = new Item('E', 40);
 
-    private static SpecialOffer SPECIAL_OFFER_ITEM_A_1 = new BuyXPayYSpecialOffer(5, 200, 1);
-    private static SpecialOffer SPECIAL_OFFER_ITEM_A_2 = new BuyXPayYSpecialOffer(3, 130, 2);
-    private static SpecialOffer SPECIAL_OFFER_ITEM_B = new BuyXPayYSpecialOffer(2, 45);
+    private static SpecialOffer SPECIAL_OFFER_ITEM_A_1 = new BuyXPayYSpecialOffer('A', 5, 200, 1);
+    private static SpecialOffer SPECIAL_OFFER_ITEM_A_2 = new BuyXPayYSpecialOffer('A', 3, 130, 2);
+    private static SpecialOffer SPECIAL_OFFER_ITEM_B = new BuyXPayYSpecialOffer('B', 2, 45);
 
     private Map<Character, Item> catalog;
     private Map<Character, List<SpecialOffer>> offersBySKU;
+    private List<SpecialOffer> offers;
 
     public CheckliteSolution() {
         initCatalog();
@@ -28,9 +29,15 @@ public class CheckliteSolution {
         catalog.put(ITEM_C.getSku(), ITEM_C);
         catalog.put(ITEM_D.getSku(), ITEM_D);
 
+        offers.add(SPECIAL_OFFER_ITEM_A_1);
+        offers.add(SPECIAL_OFFER_ITEM_A_2);
+        offers.add(SPECIAL_OFFER_ITEM_B);
+
+        /*
         ITEM_A.addSpecialOffer(SPECIAL_OFFER_ITEM_A_1);
         ITEM_A.addSpecialOffer(SPECIAL_OFFER_ITEM_A_2);
         ITEM_B.addSpecialOffer(SPECIAL_OFFER_ITEM_B);
+        */
     }
 
     public Integer checklite(String skus) {
@@ -56,6 +63,8 @@ public class CheckliteSolution {
         }
 
         // Apply offers and calculate total
+
+
         Integer total = 0;
         Iterator<Map.Entry<Item, Integer>> iterator = quantityByItem.entrySet().iterator();
         while(iterator.hasNext()) {
@@ -106,3 +115,4 @@ public class CheckliteSolution {
         return null;
     }
 }
+
