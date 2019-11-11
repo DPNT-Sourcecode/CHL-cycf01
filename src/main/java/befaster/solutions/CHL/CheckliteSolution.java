@@ -14,7 +14,10 @@ public class CheckliteSolution {
     private static SpecialOffer SPECIAL_OFFER_ITEM_A_2 = new SpecialOffer(3, 130, 2);
     private static SpecialOffer SPECIAL_OFFER_ITEM_B = new SpecialOffer(2, 45);
 
+
+
     private Map<Character, Item> catalog;
+    private Map<Character, List<SpecialOffer>> offersBySKU;
 
     public CheckliteSolution() {
         initCatalog();
@@ -104,6 +107,7 @@ public class CheckliteSolution {
         return null;
     }
 }
+
 
 
 
