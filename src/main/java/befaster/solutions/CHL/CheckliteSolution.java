@@ -12,8 +12,7 @@ public class CheckliteSolution {
     private static Item ITEM_C = new Item('C', 20);
     private static Item ITEM_D = new Item('D', 15);
     //private static Item ITEM_E = new Item('E', 40);
-
-
+    
     private static SpecialOffer SPECIAL_OFFER_ITEM_A_1 = new SpecialOffer(5, 200, 1);
     private static SpecialOffer SPECIAL_OFFER_ITEM_A_2 = new SpecialOffer(3, 130, 2);
     private static SpecialOffer SPECIAL_OFFER_ITEM_B = new SpecialOffer(2, 45);
@@ -99,26 +98,32 @@ public class CheckliteSolution {
     */
 
     private Integer totalForItem(Item item, int quantity) {
+        int total = 0;
         int numberOfItemsLeft = quantity;
-        SpecialOffer bestOfferApplicable = getBestOfferApplicableFor(item, quantity);
-        numberOfItemsLeft -= bestOfferApplicable.getQuantity();
-        
+        SpecialOffer bestOfferApplicable;
+        do {
+            bestOfferApplicable = getBestOfferApplicableFor(item, quantity);
+            numberOfItemsLeft -= bestOfferApplicable.getQuantity();
+            total += bestOfferApplicable.getPrice();
+        } while (bestOfferApplicable != null);
 
-
-        return null;
+        return total + numberOfItemsLeft * item.getPrice();
     }
 
+    /*
     private Integer getDiscountFor(Item item) {
         SpecialOffer specialOffer = item.getSpecialOffers().get(0);
         Integer priceWithoutDiscount = specialOffer.getQuantity() * item.getPrice();
         return priceWithoutDiscount - specialOffer.getPrice();
     }
+    */
 
     private SpecialOffer getBestOfferApplicableFor(Item item, int numberOfItems) {
 
         return null;
     }
 }
+
 
 
 
