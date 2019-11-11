@@ -3,12 +3,12 @@ package befaster.solutions.CHL;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
 
-import java.util.HashSet;
 import java.util.Set;
 
-import static org.mockito.Mockito.mock;
-
+@RunWith(Parameterized.class)
 public class CheckliteSolutionTest {
 
     private CheckliteSolution checkliteSolution;
@@ -58,6 +58,14 @@ public class CheckliteSolutionTest {
     }
 
     @Test
+    public void shouldCalculateItemTotalWhenSpecialOfferAppliesToProductA() {
+        String basket = "AAAAA";
+        Integer checkoutValue = checkliteSolution.checklite(basket);
+
+        Assert.assertEquals(Integer.valueOf(200), checkoutValue);
+    }
+
+    @Test
     public void shouldCalculateItemTotalWhenSpecialOfferAppliesToProductB() {
         String basket = "BB";
         Integer checkoutValue = checkliteSolution.checklite(basket);
@@ -89,3 +97,4 @@ public class CheckliteSolutionTest {
         Assert.assertEquals(Integer.valueOf(-1), returnedValue);
     }
 }
+
