@@ -60,7 +60,7 @@ public class CheckliteSolution {
         Iterator<Map.Entry<Item, Integer>> iterator = quantityByItem.entrySet().iterator();
         while(iterator.hasNext()) {
             Map.Entry<Item, Integer> itemAndQuantityEntry = iterator.next();
-            total += totalForItem(itemAndQuantityEntry.getKey(), itemAndQuantityEntry.getValue());
+            total += totalForItem(itemAndQuantityEntry.getKey(), itemAndQuantityEntry.getValue(), quantityByItem);
         }
 
         return total;
@@ -74,12 +74,12 @@ public class CheckliteSolution {
         return !catalog.containsKey(sku);
     }
 
-    private Integer totalForItem(Item item, int quantity) {
+    private Integer totalForItem(Item item, int quantity, Map<Item, Integer> quantityByItem) {
         int total = 0;
         int numberOfItemUnitsLeft = quantity;
         SpecialOffer bestOfferApplicable;
         do {
-            bestOfferApplicable = getBestOfferApplicableFor(item, numberOfItemUnitsLeft);
+            bestOfferApplicable = getBestOfferApplicableFor(item, numberOfItemUnitsLeft, quantityByItem);
             if(bestOfferApplicable != null) {
                 numberOfItemUnitsLeft -= bestOfferApplicable.getQuantity();
                 total += bestOfferApplicable.getPrice();
@@ -89,7 +89,7 @@ public class CheckliteSolution {
         return total + numberOfItemUnitsLeft * item.getPrice();
     }
 
-    private SpecialOffer getBestOfferApplicableFor(Item item, int numberOfItems) {
+    private SpecialOffer getBestOfferApplicableFor(Item item, int numberOfItems, Map<Item, Integer> quantityByItem) {
         if(item.hasSpecialOffers()) {
             List<SpecialOffer> specialOffers = item.getSpecialOffers();
             Collections.sort(specialOffers);
@@ -104,10 +104,3 @@ public class CheckliteSolution {
         return null;
     }
 }
-
-
-
-
-
-
-
