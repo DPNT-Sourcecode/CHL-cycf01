@@ -1,12 +1,13 @@
 package befaster.solutions.CHL;
 
+import java.util.List;
 import java.util.Objects;
 
 public class Item {
 
     private char sku;
     private Integer price;
-    private SpecialOffer specialOffer;
+    private List<SpecialOffer> specialOffers;
 
     public Item(char sku, Integer price) {
         this.sku = sku;
@@ -21,12 +22,12 @@ public class Item {
         return price;
     }
 
-    public SpecialOffer getSpecialOffer() {
-        return specialOffer;
+    public List<SpecialOffer> getSpecialOffers() {
+        return specialOffers;
     }
 
-    public void setSpecialOffer(SpecialOffer specialOffer) {
-        this.specialOffer = specialOffer;
+    public void addSpecialOffer(SpecialOffer specialOffer) {
+        this.specialOffers.add(specialOffer);
     }
 
     @Override
@@ -42,3 +43,4 @@ public class Item {
         return Objects.hash(sku);
     }
 }
+
