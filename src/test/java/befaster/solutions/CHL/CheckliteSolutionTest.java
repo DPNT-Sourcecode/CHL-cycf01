@@ -28,7 +28,6 @@ public class CheckliteSolutionTest {
     }
 
     private CheckliteSolution checkliteSolution;
-    private Set<Item> items;
 
     @Before
     public void setUp() {
@@ -42,11 +41,10 @@ public class CheckliteSolutionTest {
     }
 
     @Test
-    public void shouldCalculateTotalOfItemsInBasket(String items) {
-        String basket = ;
-        Integer checkoutValue = checkliteSolution.checklite(items);
+    public void shouldCalculateTotalOfItemsInBasket(String itemsInBasket, Integer expectedTotal) {
+        Integer checkoutValue = checkliteSolution.checklite(itemsInBasket);
 
-        Assert.assertEquals(, checkoutValue);
+        Assert.assertEquals(expectedTotal, checkoutValue);
     }
 
     /*
@@ -115,6 +113,7 @@ public class CheckliteSolutionTest {
     }
     */
 }
+
 
 
 
