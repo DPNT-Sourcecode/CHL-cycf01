@@ -14,6 +14,8 @@ public class CheckliteSolutionTest {
 
     @Test
     public void shouldCalculateTotalWithOneItem() {
-
+        String basket = "A";
+        Integer checkoutValue = checkliteSolution.checklite(basket);
     }
 }
+
