@@ -48,12 +48,3 @@ public class CheckliteSolutionTest {
         Assert.assertEquals(expectedTotal, checkoutValue);
     }
 }
-
-
-
-
-
-
-
-
-
