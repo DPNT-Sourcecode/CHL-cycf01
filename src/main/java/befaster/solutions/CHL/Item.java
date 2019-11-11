@@ -6,6 +6,7 @@ public class Item {
 
     private String sku;
     private BigDecimal price;
+    private SpecialOffer specialOffer;
 
     public Item(String sku, BigDecimal price) {
         this.sku = sku;
@@ -28,3 +29,4 @@ public class Item {
         this.price = price;
     }
 }
+
