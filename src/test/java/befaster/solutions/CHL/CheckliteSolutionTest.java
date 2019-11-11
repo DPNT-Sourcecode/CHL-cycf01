@@ -16,11 +16,6 @@ public class CheckliteSolutionTest {
 
     @Before
     public void setUp() {
-        /*
-        items = new HashSet<Item>();
-        Item itemA = mock(Item.class);
-        items.add(itemA);
-        */
         checkliteSolution = new CheckliteSolution();
     }
 
@@ -46,5 +41,6 @@ public class CheckliteSolutionTest {
         Assert.assertEquals(Integer.valueOf(115), checkoutValue);
     }
 }
+
 
 

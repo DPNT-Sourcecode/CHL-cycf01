@@ -31,11 +31,16 @@ public class CheckliteSolution {
         for (int i = 0; i < skus.length(); i++) {
             char sku = skus.charAt(i);
 
+            Item item = catalog.get(sku);
+            if(item != null) {
+                total += item.getPrice();
+            }
         }
 
         return total;
     }
 }
+
 
 
 
