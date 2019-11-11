@@ -7,13 +7,13 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
 import java.util.Arrays;
-import java.util.Set;
+import java.util.Collection;
 
 @RunWith(Parameterized.class)
 public class CheckliteSolutionTest {
 
     @Parameterized.Parameters
-    public static Iterable<Object[]> data() {
+    public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][] {
                 {"", Integer.valueOf(0)},
                 {"A", Integer.valueOf(50)},
@@ -114,6 +114,7 @@ public class CheckliteSolutionTest {
     }
     */
 }
+
 
 
 
