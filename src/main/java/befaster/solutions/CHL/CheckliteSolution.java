@@ -1,7 +1,6 @@
 package befaster.solutions.CHL;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class CheckliteSolution {
@@ -10,7 +9,7 @@ public class CheckliteSolution {
     private static Item ITEM_B = new Item('B', 30);
     private static Item ITEM_C = new Item('C', 20);
     private static Item ITEM_D = new Item('D', 15);
-    private static Item ITEM_E = new Item('E', 40);
+    //private static Item ITEM_E = new Item('E', 40);
 
     private static SpecialOffer SPECIAL_OFFER_ITEM_A = new SpecialOffer(3, 130);
     //private static SpecialOffer SPECIAL_OFFER_ITEM_A_2 = new SpecialOffer(5, 200);
@@ -78,16 +77,19 @@ public class CheckliteSolution {
         if (item.hasSpecialOffers()) {
             Integer quantity = quantityBySku.get(item.getSku());
 
-            return quantity == item.getSpecialOffers().getQuantity();
+            SpecialOffer specialOffer = item.getSpecialOffers().get(0);
+            return quantity == specialOffer.getQuantity();
         }
         return false;
     }
 
     private Integer getDiscountFor(Item item) {
-        Integer priceWithoutDiscount = item.getSpecialOffer().getQuantity() * item.getPrice();
-        return priceWithoutDiscount - item.getSpecialOffer().getPrice();
+        SpecialOffer specialOffer = item.getSpecialOffers().get(0);
+        Integer priceWithoutDiscount = specialOffer.getQuantity() * item.getPrice();
+        return priceWithoutDiscount - specialOffer.getPrice();
     }
 }
+
 
 
 
