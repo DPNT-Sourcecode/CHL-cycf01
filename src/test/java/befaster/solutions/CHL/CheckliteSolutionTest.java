@@ -15,9 +15,10 @@ public class CheckliteSolutionTest {
     @Parameterized.Parameters
     public static Iterable<Object[]> data() {
         return Arrays.asList(new Object[][] {
-            {"A", Integer.valueOf(50)},
-            {"ABCD", Integer.valueOf(115)},
-            {"AAA", Integer.valueOf(130)},
+                {"", Integer.valueOf(0)},
+                {"A", Integer.valueOf(50)},
+                {"ABCD", Integer.valueOf(115)},
+                {"AAA", Integer.valueOf(130)},
                 {"ABCD", Integer.valueOf(115)},
                 {"AAAAA", Integer.valueOf(200)},
                 {"AAAAAA", Integer.valueOf(260)},
@@ -27,17 +28,17 @@ public class CheckliteSolutionTest {
         });
     }
 
+    @Parameterized.Parameter
+    public String items;
+
+    @Parameterized.Parameter(1)
+    public Integer expectedTotal;
+
     private CheckliteSolution checkliteSolution;
 
     @Before
     public void setUp() {
         checkliteSolution = new CheckliteSolution();
-    }
-
-    @Test
-    public void shouldReturnZeroForEmptyBasket() {
-        Integer checkoutValue = checkliteSolution.checklite("");
-        Assert.assertEquals(Integer.valueOf(0), checkoutValue);
     }
 
     @Test
@@ -113,6 +114,7 @@ public class CheckliteSolutionTest {
     }
     */
 }
+
 
 
 
