@@ -94,12 +94,8 @@ public class CheckliteSolution {
         Integer priceWithoutDiscount = specialOffer.getQuantity() * item.getPrice();
         return priceWithoutDiscount - specialOffer.getPrice();
     }
+
+    private SpecialOffer getBestOfferApplicable() {
+        return null;
+    }
 }
-
-
-
-
-
-
-
-
