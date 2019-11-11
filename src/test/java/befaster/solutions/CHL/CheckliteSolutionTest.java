@@ -23,12 +23,21 @@ public class CheckliteSolutionTest {
     }
 
     @Test
+    public void shouldReturnZeroForEmptyBasket() {
+        Integer checkoutValue = checkliteSolution.checklite("");
+        Assert.assertEquals(Integer.valueOf(0), checkoutValue);
+    }
+
+    /*
+    @Test
     public void shouldCalculateTotalWithOneItemInBasket() {
         String basket = "A";
         Integer checkoutValue = checkliteSolution.checklite(basket);
 
         Assert.assertEquals(Integer.valueOf(50), checkoutValue);
     }
+    */
 }
+
 
 
