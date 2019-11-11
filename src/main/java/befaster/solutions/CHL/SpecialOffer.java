@@ -2,7 +2,7 @@ package befaster.solutions.CHL;
 
 import java.util.Comparator;
 
-public class SpecialOffer implements Comparable<SpecialOffer> {
+public abstract class SpecialOffer implements Comparable<SpecialOffer> {
 
     private int quantity;
     private Integer price;
@@ -17,6 +17,8 @@ public class SpecialOffer implements Comparable<SpecialOffer> {
         this.price = price;
         this.ranking = ranking;
     }
+
+    public abstract void apply();
 
     public int getQuantity() {
         return quantity;
@@ -36,3 +38,4 @@ public class SpecialOffer implements Comparable<SpecialOffer> {
     }
 
 }
+
