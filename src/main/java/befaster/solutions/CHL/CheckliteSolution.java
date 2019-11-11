@@ -11,8 +11,8 @@ public class CheckliteSolution {
     private static Item ITEM_D = new Item('D', 15);
     //private static Item ITEM_E = new Item('E', 40);
 
-    private static SpecialOffer SPECIAL_OFFER_ITEM_A = new SpecialOffer(3, 130);
-    //private static SpecialOffer SPECIAL_OFFER_ITEM_A_2 = new SpecialOffer(5, 200);
+    private static SpecialOffer SPECIAL_OFFER_ITEM_A_1 = new SpecialOffer(3, 130);
+    private static SpecialOffer SPECIAL_OFFER_ITEM_A_2 = new SpecialOffer(5, 200);
     private static SpecialOffer SPECIAL_OFFER_ITEM_B = new SpecialOffer(2, 45);
 
     private Map<Character, Item> catalog;
@@ -28,7 +28,8 @@ public class CheckliteSolution {
         catalog.put(ITEM_C.getSku(), ITEM_C);
         catalog.put(ITEM_D.getSku(), ITEM_D);
 
-        ITEM_A.addSpecialOffer(SPECIAL_OFFER_ITEM_A);
+        ITEM_A.addSpecialOffer(SPECIAL_OFFER_ITEM_A_1);
+        ITEM_A.addSpecialOffer(SPECIAL_OFFER_ITEM_A_2);
         ITEM_B.addSpecialOffer(SPECIAL_OFFER_ITEM_B);
     }
 
@@ -40,7 +41,7 @@ public class CheckliteSolution {
         Integer total = 0;
         Map<Character, Integer> quantityBySku = new HashMap<>();
 
-        
+
 
 
         for (int i = 0; i < skus.length(); i++) {
@@ -94,6 +95,7 @@ public class CheckliteSolution {
         return priceWithoutDiscount - specialOffer.getPrice();
     }
 }
+
 
 
 
