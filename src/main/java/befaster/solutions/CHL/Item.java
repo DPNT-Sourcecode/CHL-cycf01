@@ -15,18 +15,15 @@ public class Item {
         return sku;
     }
 
-    public void setSku(char sku) {
-        this.sku = sku;
-    }
-
     public Integer getPrice() {
         return price;
     }
 
-    public void setPrice(Integer price) {
-        this.price = price;
+    public void setSpecialOffer(SpecialOffer specialOffer) {
+        this.specialOffer = specialOffer;
     }
 }
+
 
 
 
