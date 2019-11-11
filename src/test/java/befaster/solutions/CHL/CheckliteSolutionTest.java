@@ -23,6 +23,7 @@ public class CheckliteSolutionTest {
                 {"AAAAA", Integer.valueOf(200)},
                 {"AAAAAA", Integer.valueOf(250)},
                 {"BB", Integer.valueOf(45)},
+                {"EEB", Integer.valueOf(80)},
                 {null, Integer.valueOf(-1)},
                 {"!", Integer.valueOf(-1)}
         });
@@ -48,4 +49,5 @@ public class CheckliteSolutionTest {
         Assert.assertEquals(expectedTotal, checkoutValue);
     }
 }
+
 
