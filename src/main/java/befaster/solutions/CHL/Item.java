@@ -2,20 +2,20 @@ package befaster.solutions.CHL;
 
 public class Item {
 
-    private String sku;
+    private char sku;
     private Integer price;
     private SpecialOffer specialOffer;
 
-    public Item(String sku, Integer price) {
+    public Item(char sku, Integer price) {
         this.sku = sku;
         this.price = price;
     }
 
-    public String getSku() {
+    public char getSku() {
         return sku;
     }
 
-    public void setSku(String sku) {
+    public void setSku(char sku) {
         this.sku = sku;
     }
 
@@ -27,5 +27,6 @@ public class Item {
         this.price = price;
     }
 }
+
 
 

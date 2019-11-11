@@ -40,7 +40,10 @@ public class CheckliteSolutionTest {
 
         Assert.assertEquals(Integer.valueOf(115), checkoutValue);
     }
+
+    
 }
+
 
 
 

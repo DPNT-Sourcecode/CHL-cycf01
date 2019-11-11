@@ -6,12 +6,12 @@ import java.util.Map;
 
 public class CheckliteSolution {
 
-    private static Item ITEM_A = new Item("A", 50);
-    private static Item ITEM_B = new Item("B", 30);
-    private static Item ITEM_C = new Item("C", 20);
-    private static Item ITEM_D = new Item("D", 15);
+    private static Item ITEM_A = new Item('A', 50);
+    private static Item ITEM_B = new Item('B', 30);
+    private static Item ITEM_C = new Item('C', 20);
+    private static Item ITEM_D = new Item('D', 15);
 
-    private Map<String, Item> catalog;
+    private Map<Character, Item> catalog;
 
     public CheckliteSolution() {
         initCatalog();
@@ -40,6 +40,7 @@ public class CheckliteSolution {
         return total;
     }
 }
+
 
 
 
