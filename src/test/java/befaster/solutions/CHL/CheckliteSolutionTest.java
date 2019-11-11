@@ -1,5 +1,6 @@
 package befaster.solutions.CHL;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -17,14 +18,17 @@ public class CheckliteSolutionTest {
     public void setUp() {
         items = new HashSet<Item>();
         Item itemA = mock(Item.class);
-        
+        items.add(itemA);
         checkliteSolution = new CheckliteSolution(items);
     }
 
     @Test
-    public void shouldCalculateTotalWithOneItem() {
+    public void shouldCalculateTotalWithOneItemInBasket() {
         String basket = "A";
         Integer checkoutValue = checkliteSolution.checklite(basket);
+
+        Assert.assertEquals(Integer.valueOf(50), checkoutValue);
     }
 }
+
 
