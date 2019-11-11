@@ -1,6 +1,7 @@
 package befaster.solutions.CHL;
 
 import java.util.Comparator;
+import java.util.Map;
 
 public abstract class SpecialOffer implements Comparable<SpecialOffer> {
 
@@ -18,7 +19,7 @@ public abstract class SpecialOffer implements Comparable<SpecialOffer> {
         this.ranking = ranking;
     }
 
-    public abstract void apply();
+    public abstract void apply(Map<Item, Integer> quantityByItem);
 
     public int getQuantity() {
         return quantity;
@@ -38,4 +39,5 @@ public abstract class SpecialOffer implements Comparable<SpecialOffer> {
     }
 
 }
+
 
