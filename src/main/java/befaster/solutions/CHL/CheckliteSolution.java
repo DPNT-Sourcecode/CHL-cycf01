@@ -6,14 +6,15 @@ import java.util.Set;
 
 public class CheckliteSolution {
 
-    private Set<Item> stock;
+    private Set<Item> catalog;
 
-    public CheckliteSolution(Set<Item> stock) {
-        this.stock = stock;
+    public CheckliteSolution(Set<Item> catalog) {
+        this.catalog = catalog;
     }
 
     public Integer checklite(String skus) {
         throw new SolutionNotImplementedException();
     }
 }
+
 

@@ -3,13 +3,22 @@ package befaster.solutions.CHL;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import static org.mockito.Mockito.mock;
+
 public class CheckliteSolutionTest {
 
-    CheckliteSolution checkliteSolution;
+    private CheckliteSolution checkliteSolution;
+    private Set<Item> items;
 
     @Before
     public void setUp() {
-        checkliteSolution = new CheckliteSolution();
+        items = new HashSet<Item>();
+        Item itemA = mock(Item.class);
+        
+        checkliteSolution = new CheckliteSolution(items);
     }
 
     @Test
@@ -18,3 +27,4 @@ public class CheckliteSolutionTest {
         Integer checkoutValue = checkliteSolution.checklite(basket);
     }
 }
+
