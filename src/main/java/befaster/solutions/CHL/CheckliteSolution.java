@@ -55,7 +55,7 @@ public class CheckliteSolution {
         if (item.getSpecialOffer() != null) {
             Integer quantity = quantityBySku.get(item.getSku());
 
-            return quantity == catalog.get(item).getSpecialOffer().getQuantity();
+            return quantity == item.getSpecialOffer().getQuantity();
         }
         return false;
     }
@@ -65,6 +65,7 @@ public class CheckliteSolution {
         return priceWithoutDiscount - item.getSpecialOffer().getPrice();
     }
 }
+
 
 
 
