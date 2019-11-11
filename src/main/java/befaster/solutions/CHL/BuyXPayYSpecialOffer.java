@@ -2,7 +2,7 @@ package befaster.solutions.CHL;
 
 import java.util.Map;
 
-public class BuyXPayYSpecialOffer extends SpecialOffer implements Comparable<SpecialOffer> {
+public class BuyXPayYSpecialOffer extends SpecialOffer implements Comparable<BuyXPayYSpecialOffer>{
     private int quantity;
     private Integer price;
     private int ranking;
@@ -31,9 +31,10 @@ public class BuyXPayYSpecialOffer extends SpecialOffer implements Comparable<Spe
     }
 
     @Override
-    public int compareTo(SpecialOffer other) {
+    public int compareTo(BuyXPayYSpecialOffer other) {
         return this.ranking - other.ranking;
     }
 }
+
 
 
