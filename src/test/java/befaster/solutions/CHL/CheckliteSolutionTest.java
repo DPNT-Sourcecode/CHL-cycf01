@@ -26,6 +26,14 @@ public class CheckliteSolutionTest {
     }
 
     @Test
+    public void shouldCalculateTotalWithItemInBasket() {
+        String basket = "A";
+        Integer checkoutValue = checkliteSolution.checklite(basket);
+
+        Assert.assertEquals(Integer.valueOf(50), checkoutValue);
+    }
+
+    @Test
     public void shouldCalculateTotalWithOneItemInBasket() {
         String basket = "A";
         Integer checkoutValue = checkliteSolution.checklite(basket);
@@ -42,10 +50,19 @@ public class CheckliteSolutionTest {
     }
 
     @Test
-    public void shouldCalculateItemTotalWhenSpecialOfferApplies() {
+    public void shouldCalculateItemTotalWhenSpecialOfferAppliesToProductA() {
         String basket = "AAA";
         Integer checkoutValue = checkliteSolution.checklite(basket);
 
         Assert.assertEquals(Integer.valueOf(130), checkoutValue);
     }
+
+    @Test
+    public void shouldCalculateItemTotalWhenSpecialOfferAppliesToProductB() {
+        String basket = "BB";
+        Integer checkoutValue = checkliteSolution.checklite(basket);
+
+        Assert.assertEquals(Integer.valueOf(45), checkoutValue);
+    }
 }
+

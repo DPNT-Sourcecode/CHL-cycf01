@@ -45,7 +45,7 @@ public class CheckliteSolution {
                     quantityBySku.put(sku, 0);
                 }
                 Integer quantityForThisSku = quantityBySku.get(sku);
-                quantityBySku.put(sku, quantityForThisSku ++);
+                quantityBySku.put(sku, ++quantityForThisSku);
 
                 if (discountApplies(quantityBySku, item)) {
                     total -= getDiscountFor(item);
@@ -71,3 +71,4 @@ public class CheckliteSolution {
         return priceWithoutDiscount - item.getSpecialOffer().getPrice();
     }
 }
+
