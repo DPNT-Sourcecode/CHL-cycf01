@@ -13,6 +13,7 @@ public class CheckliteSolution {
     private static SpecialOffer SPECIAL_OFFER_ITEM_A_1 = new BuyXPayYSpecialOffer('A', 5, 200, 1);
     private static SpecialOffer SPECIAL_OFFER_ITEM_A_2 = new BuyXPayYSpecialOffer('A', 3, 130, 2);
     private static SpecialOffer SPECIAL_OFFER_ITEM_B = new BuyXPayYSpecialOffer('B', 2, 45);
+    private static SpecialOffer SPECIAL_OFFER_ITEM_E = new BuyXGetYForFree('E', 2, 'B');
 
     private Map<Character, Item> catalog;
     private Map<Character, List<SpecialOffer>> offersBySKU;
@@ -28,10 +29,12 @@ public class CheckliteSolution {
         catalog.put(ITEM_B.getSku(), ITEM_B);
         catalog.put(ITEM_C.getSku(), ITEM_C);
         catalog.put(ITEM_D.getSku(), ITEM_D);
+        catalog.put(ITEM_E.getSku(), ITEM_E);
 
         offers.add(SPECIAL_OFFER_ITEM_A_1);
         offers.add(SPECIAL_OFFER_ITEM_A_2);
         offers.add(SPECIAL_OFFER_ITEM_B);
+        offers.add(SPECIAL_OFFER_ITEM_E);
 
         /*
         ITEM_A.addSpecialOffer(SPECIAL_OFFER_ITEM_A_1);
@@ -115,4 +118,5 @@ public class CheckliteSolution {
         return null;
     }
 }
+
 
