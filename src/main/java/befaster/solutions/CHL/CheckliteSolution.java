@@ -72,7 +72,7 @@ public class CheckliteSolution {
         Iterator<Map.Entry<Character, Integer>> iterator = quantityBySku.entrySet().iterator();
         while(iterator.hasNext()) {
             Map.Entry<Character, Integer> itemAndQuantityEntry = iterator.next();
-
+            total += totalForItem();
         }
 
 
@@ -110,3 +110,4 @@ public class CheckliteSolution {
         return null;
     }
 }
+
