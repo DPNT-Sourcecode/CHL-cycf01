@@ -39,7 +39,7 @@ public class CheckliteSolution {
                 total += item.getPrice();
             }
 
-            if(discountApplies()) {
+            if(discountApplies(quantityBySku, sku)) {
                 total -= getDiscountFor(sku);
             }
         }
@@ -47,9 +47,12 @@ public class CheckliteSolution {
         return total;
     }
 
-    private boolean discountApplies() {
+    private boolean discountApplies(Map<Character, Integer> quantityBySku, char sku) {
+        Integer quantity = quantityBySku.get(sku);
+        if()
         return false;
     }
 }
+
 
 
