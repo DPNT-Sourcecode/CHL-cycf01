@@ -74,13 +74,14 @@ public class CheckliteSolutionTest {
     }
 
     @Test
-    public void shouldReturnMinusOneIfInputIsInvalid() {
-        String invalidInput = "!";
+    public void shouldReturnMinusOneIfInputIsNull() {
+        String invalidInput = null;
         Integer returnedValue = checkliteSolution.checklite(invalidInput);
 
         Assert.assertEquals(Integer.valueOf(-1), returnedValue);
     }
 }
+
 
 
 

@@ -31,7 +31,7 @@ public class CheckliteSolution {
     }
 
     public Integer checklite(String skus) {
-        if(inputIsInvalid()) {
+        if(inputIsInvalid(skus)) {
             return -1;
         }
 
@@ -40,6 +40,11 @@ public class CheckliteSolution {
 
         for (int i = 0; i < skus.length(); i++) {
             char sku = skus.charAt(i);
+            /*
+            if(skuIsInvalid(sku)) {
+                return -1;
+            }
+            */
 
             Item item = catalog.get(sku);
             if(item != null) {
@@ -57,12 +62,11 @@ public class CheckliteSolution {
                 }
             }
         }
-
         return total;
     }
 
-    private boolean inputIsInvalid() {
-        return false;
+    private boolean inputIsInvalid(String input) {
+        return input != null;
     }
 
     private boolean discountApplies(Map<Character, Integer> quantityBySku, Item item) {
@@ -79,5 +83,6 @@ public class CheckliteSolution {
         return priceWithoutDiscount - item.getSpecialOffer().getPrice();
     }
 }
+
 
 
