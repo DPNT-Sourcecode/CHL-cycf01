@@ -29,6 +29,7 @@ public class CheckliteSolution {
 
     public Integer checklite(String skus) {
         Integer total = 0;
+        Map<Character, Integer> quantityBySku = new HashMap<>();
 
         for (int i = 0; i < skus.length(); i++) {
             char sku = skus.charAt(i);
@@ -42,3 +43,4 @@ public class CheckliteSolution {
         return total;
     }
 }
+
