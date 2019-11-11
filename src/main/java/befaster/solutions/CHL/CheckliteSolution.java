@@ -1,9 +1,6 @@
 package befaster.solutions.CHL;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class CheckliteSolution {
 
@@ -119,10 +116,15 @@ public class CheckliteSolution {
     */
 
     private SpecialOffer getBestOfferApplicableFor(Item item, int numberOfItems) {
+        if(item.hasSpecialOffers()) {
+            List<SpecialOffer> specialOffers = item.getSpecialOffers();
+            specialOffers
+        }
 
         return null;
     }
 }
+
 
 
 

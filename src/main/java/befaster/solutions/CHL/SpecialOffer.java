@@ -32,7 +32,8 @@ public class SpecialOffer implements Comparator<SpecialOffer> {
 
     @Override
     public int compare(SpecialOffer o1, SpecialOffer o2) {
-        return 
+        return o1.ranking - o2.ranking;
     }
 }
+
 
