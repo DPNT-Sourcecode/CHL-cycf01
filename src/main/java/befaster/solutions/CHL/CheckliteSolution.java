@@ -40,6 +40,9 @@ public class CheckliteSolution {
         Integer total = 0;
         Map<Character, Integer> quantityBySku = new HashMap<>();
 
+        
+
+
         for (int i = 0; i < skus.length(); i++) {
             char sku = skus.charAt(i);
             if(skuIsInvalid(sku)) {
@@ -61,6 +64,8 @@ public class CheckliteSolution {
                     quantityBySku.put(sku, 0);
                 }
             }
+
+
         }
         return total;
     }
@@ -89,6 +94,7 @@ public class CheckliteSolution {
         return priceWithoutDiscount - specialOffer.getPrice();
     }
 }
+
 
 
 
