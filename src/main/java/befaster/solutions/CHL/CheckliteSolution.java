@@ -41,7 +41,7 @@ public class CheckliteSolution {
             return -1;
         }
 
-        Map<Character, Integer> quantityBySku = new HashMap<>();
+        Map<Item, Integer> quantityByItem = new HashMap<>();
 
         for (int i = 0; i < skus.length(); i++) {
             char sku = skus.charAt(i);
@@ -51,11 +51,11 @@ public class CheckliteSolution {
 
             Item item = catalog.get(sku);
             if(item != null) {
-                if(!quantityBySku.containsKey(sku)) {
-                    quantityBySku.put(sku, 0);
+                if(!quantityByItem.containsKey(sku)) {
+                    quantityByItem.put(item, 0);
                 }
-                Integer quantityForThisSku = quantityBySku.get(sku);
-                quantityBySku.put(sku, ++quantityForThisSku);
+                Integer quantityForThisSku = quantityByItem.get(sku);
+                quantityByItem.put(item, ++quantityForThisSku);
 
 
                 /*
@@ -69,9 +69,9 @@ public class CheckliteSolution {
 
         // Apply offers and calculate total
         Integer total = 0;
-        Iterator<Map.Entry<Character, Integer>> iterator = quantityBySku.entrySet().iterator();
+        Iterator<Map.Entry<Item, Integer>> iterator = quantityByItem.entrySet().iterator();
         while(iterator.hasNext()) {
-            Map.Entry<Character, Integer> itemAndQuantityEntry = iterator.next();
+            Map.Entry<Item, Integer> itemAndQuantityEntry = iterator.next();
             total += totalForItem(itemAndQuantityEntry.getKey(), itemAndQuantityEntry.getValue());
         }
 
@@ -99,7 +99,11 @@ public class CheckliteSolution {
     */
 
     private Integer totalForItem(Item item, int quantity) {
-        SpecialOffer specialOffer = getBestOfferApplicableFor(item, quantity);
+        int numberOfItemsLeft = quantity;
+        SpecialOffer bestOfferApplicable = getBestOfferApplicableFor(item, quantity);
+        numberOfItemsLeft -= bestOfferApplicable.getQuantity();
+        
+
 
         return null;
     }
@@ -115,6 +119,7 @@ public class CheckliteSolution {
         return null;
     }
 }
+
 
 
 
