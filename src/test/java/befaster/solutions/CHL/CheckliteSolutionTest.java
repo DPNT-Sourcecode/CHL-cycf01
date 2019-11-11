@@ -80,7 +80,16 @@ public class CheckliteSolutionTest {
 
         Assert.assertEquals(Integer.valueOf(-1), returnedValue);
     }
+
+    @Test
+    public void shouldReturnMinusOneIfInputContainsInvalidCharacter() {
+        String invalidInput = "!";
+        Integer returnedValue = checkliteSolution.checklite(invalidInput);
+
+        Assert.assertEquals(Integer.valueOf(-1), returnedValue);
+    }
 }
+
 
 
 

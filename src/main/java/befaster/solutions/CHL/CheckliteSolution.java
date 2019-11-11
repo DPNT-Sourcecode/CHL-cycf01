@@ -69,6 +69,10 @@ public class CheckliteSolution {
         return input != null;
     }
 
+    private boolean skuIsInvalid(char sku) {
+        return false;
+    }
+
     private boolean discountApplies(Map<Character, Integer> quantityBySku, Item item) {
         if (item.getSpecialOffer() != null) {
             Integer quantity = quantityBySku.get(item.getSku());
@@ -83,6 +87,7 @@ public class CheckliteSolution {
         return priceWithoutDiscount - item.getSpecialOffer().getPrice();
     }
 }
+
 
 
 
