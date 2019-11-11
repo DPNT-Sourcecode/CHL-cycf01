@@ -40,11 +40,9 @@ public class CheckliteSolution {
 
         for (int i = 0; i < skus.length(); i++) {
             char sku = skus.charAt(i);
-            /*
             if(skuIsInvalid(sku)) {
                 return -1;
             }
-            */
 
             Item item = catalog.get(sku);
             if(item != null) {
@@ -66,11 +64,11 @@ public class CheckliteSolution {
     }
 
     private boolean inputIsInvalid(String input) {
-        return input != null;
+        return input == null;
     }
 
     private boolean skuIsInvalid(char sku) {
-        return false;
+        return !catalog.containsKey(sku);
     }
 
     private boolean discountApplies(Map<Character, Integer> quantityBySku, Item item) {
@@ -87,6 +85,7 @@ public class CheckliteSolution {
         return priceWithoutDiscount - item.getSpecialOffer().getPrice();
     }
 }
+
 
 
 

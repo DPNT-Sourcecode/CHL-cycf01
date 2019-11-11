@@ -82,13 +82,14 @@ public class CheckliteSolutionTest {
     }
 
     @Test
-    public void shouldReturnMinusOneIfInputContainsInvalidCharacter() {
+    public void shouldReturnMinusOneIfInputContainsInvalidSku() {
         String invalidInput = "!";
         Integer returnedValue = checkliteSolution.checklite(invalidInput);
 
         Assert.assertEquals(Integer.valueOf(-1), returnedValue);
     }
 }
+
 
 
 
