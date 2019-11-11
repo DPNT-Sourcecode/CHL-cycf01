@@ -85,8 +85,3 @@ public class CheckliteSolution {
         return priceWithoutDiscount - item.getSpecialOffer().getPrice();
     }
 }
-
-
-
-
-

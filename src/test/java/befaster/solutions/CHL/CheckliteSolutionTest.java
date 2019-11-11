@@ -89,9 +89,3 @@ public class CheckliteSolutionTest {
         Assert.assertEquals(Integer.valueOf(-1), returnedValue);
     }
 }
-
-
-
-
-
-
