@@ -41,7 +41,6 @@ public class CheckliteSolution {
             return -1;
         }
 
-        Integer total = 0;
         Map<Character, Integer> quantityBySku = new HashMap<>();
 
         for (int i = 0; i < skus.length(); i++) {
@@ -52,8 +51,6 @@ public class CheckliteSolution {
 
             Item item = catalog.get(sku);
             if(item != null) {
-                total += item.getPrice();
-
                 if(!quantityBySku.containsKey(sku)) {
                     quantityBySku.put(sku, 0);
                 }
@@ -70,9 +67,11 @@ public class CheckliteSolution {
             }
         }
 
-        // Apply offers
-        //Iterator<Map.Entry<Character, Integer>> iterator = quantityBySku.entrySet().iterator();
-        for() {
+        // Apply offers and calculate total
+        Integer total = 0;
+        Iterator<Map.Entry<Character, Integer>> iterator = quantityBySku.entrySet().iterator();
+        while(iterator.hasNext()) {
+            Map.Entry<Character, Integer> itemAndQuantityEntry = iterator.next();
 
         }
 
@@ -111,9 +110,3 @@ public class CheckliteSolution {
         return null;
     }
 }
-
-
-
-
-
-
