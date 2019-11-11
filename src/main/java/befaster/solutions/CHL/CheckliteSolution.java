@@ -3,6 +3,7 @@ package befaster.solutions.CHL;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
 
 public class CheckliteSolution {
 
@@ -70,8 +71,10 @@ public class CheckliteSolution {
         }
 
         // Apply offers
-        Iterator<Map.Entry<Character, Integer>> iterator = quantityBySku.entrySet().iterator();
-        
+        //Iterator<Map.Entry<Character, Integer>> iterator = quantityBySku.entrySet().iterator();
+        for() {
+
+        }
 
 
         return total;
@@ -108,6 +111,7 @@ public class CheckliteSolution {
         return null;
     }
 }
+
 
 
 
