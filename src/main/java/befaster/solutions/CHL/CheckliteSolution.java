@@ -74,6 +74,8 @@ public class CheckliteSolution {
         return !catalog.containsKey(sku);
     }
 
+    
+
     private Integer totalForItem(Item item, int quantity, Map<Item, Integer> quantityByItem) {
         int total = 0;
         int numberOfItemUnitsLeft = quantity;
@@ -104,3 +106,4 @@ public class CheckliteSolution {
         return null;
     }
 }
+
