@@ -72,11 +72,16 @@ public class CheckliteSolution {
         Iterator<Map.Entry<Character, Integer>> iterator = quantityBySku.entrySet().iterator();
         while(iterator.hasNext()) {
             Map.Entry<Character, Integer> itemAndQuantityEntry = iterator.next();
-            total += totalForItem();
+            total += totalForItem(itemAndQuantityEntry);
         }
 
-
         return total;
+    }
+
+    private Integer totalForItem(Item item, int quantity) {
+
+
+        return null;
     }
 
     private boolean inputIsInvalid(String input) {
@@ -110,4 +115,5 @@ public class CheckliteSolution {
         return null;
     }
 }
+
 
