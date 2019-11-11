@@ -79,6 +79,7 @@ public class CheckliteSolution {
         return !catalog.containsKey(sku);
     }
 
+    /*
     private boolean discountApplies(Map<Character, Integer> quantityBySku, Item item) {
         if (item.hasSpecialOffers()) {
             Integer quantity = quantityBySku.get(item.getSku());
@@ -88,6 +89,7 @@ public class CheckliteSolution {
         }
         return false;
     }
+    */
 
     private Integer getDiscountFor(Item item) {
         SpecialOffer specialOffer = item.getSpecialOffers().get(0);
@@ -95,7 +97,8 @@ public class CheckliteSolution {
         return priceWithoutDiscount - specialOffer.getPrice();
     }
 
-    private SpecialOffer getBestOfferApplicable() {
+    private SpecialOffer getBestOfferApplicableFor(Item item) {
         return null;
     }
 }
+
