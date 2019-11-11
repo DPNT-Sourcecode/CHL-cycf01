@@ -64,5 +64,14 @@ public class CheckliteSolutionTest {
 
         Assert.assertEquals(Integer.valueOf(45), checkoutValue);
     }
+
+    @Test
+    public void shouldCalculateItemTotalWithMultipleSpecialOffers() {
+        String basket = "AAAAAA";
+        Integer checkoutValue = checkliteSolution.checklite(basket);
+
+        Assert.assertEquals(Integer.valueOf(260), checkoutValue);
+    }
 }
+
 

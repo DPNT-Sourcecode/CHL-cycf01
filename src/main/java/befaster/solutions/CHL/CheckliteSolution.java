@@ -31,6 +31,10 @@ public class CheckliteSolution {
     }
 
     public Integer checklite(String skus) {
+        if(inputIsInvalid()) {
+            return -1;
+        }
+
         Integer total = 0;
         Map<Character, Integer> quantityBySku = new HashMap<>();
 
@@ -57,6 +61,10 @@ public class CheckliteSolution {
         return total;
     }
 
+    private boolean inputIsInvalid() {
+        return false;
+    }
+
     private boolean discountApplies(Map<Character, Integer> quantityBySku, Item item) {
         if (item.getSpecialOffer() != null) {
             Integer quantity = quantityBySku.get(item.getSku());
@@ -71,4 +79,5 @@ public class CheckliteSolution {
         return priceWithoutDiscount - item.getSpecialOffer().getPrice();
     }
 }
+
 
