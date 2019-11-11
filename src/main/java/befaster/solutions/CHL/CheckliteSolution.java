@@ -47,7 +47,7 @@ public class CheckliteSolution {
 
             Item item = catalog.get(sku);
             if(item != null) {
-                if(!quantityByItem.containsKey(sku)) {
+                if(!quantityByItem.containsKey(item)) {
                     quantityByItem.put(item, 0);
                 }
                 Integer quantityForThisSku = quantityByItem.get(item);
@@ -132,5 +132,6 @@ public class CheckliteSolution {
         return null;
     }
 }
+
 
 
