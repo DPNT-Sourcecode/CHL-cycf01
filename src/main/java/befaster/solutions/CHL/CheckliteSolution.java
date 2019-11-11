@@ -1,6 +1,5 @@
 package befaster.solutions.CHL;
 
-import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -12,6 +11,7 @@ public class CheckliteSolution {
     private static Item ITEM_D = new Item('D', 15);
 
     private static SpecialOffer SPECIAL_OFFER_ITEM_A = new SpecialOffer(3, 130);
+    private static SpecialOffer SPECIAL_OFFER_ITEM_B = new SpecialOffer(2, 45);
 
     private Map<Character, Item> catalog;
 
@@ -25,8 +25,6 @@ public class CheckliteSolution {
         catalog.put(ITEM_B.getSku(), ITEM_B);
         catalog.put(ITEM_C.getSku(), ITEM_C);
         catalog.put(ITEM_D.getSku(), ITEM_D);
-
-
     }
 
     public Integer checklite(String skus) {
@@ -44,10 +42,3 @@ public class CheckliteSolution {
         return total;
     }
 }
-
-
-
-
-
-
-
