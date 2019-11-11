@@ -38,9 +38,18 @@ public class CheckliteSolution {
             if(item != null) {
                 total += item.getPrice();
             }
+
+            if(discountApplies()) {
+                total -= getDiscountFor(sku);
+            }
         }
 
         return total;
     }
+
+    private boolean discountApplies() {
+        return false;
+    }
 }
+
 
