@@ -1,5 +1,6 @@
 package befaster.solutions.CHL;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -22,11 +23,18 @@ public class Item {
         return price;
     }
 
+    public boolean hasSpecialOffers() {
+        return specialOffers != null && specialOffers.size() > 0;
+    }
+
     public List<SpecialOffer> getSpecialOffers() {
         return specialOffers;
     }
 
     public void addSpecialOffer(SpecialOffer specialOffer) {
+        if(specialOffers == null) {
+            specialOffers = new ArrayList<>();
+        }
         this.specialOffers.add(specialOffer);
     }
 
@@ -43,4 +51,5 @@ public class Item {
         return Objects.hash(sku);
     }
 }
+
 

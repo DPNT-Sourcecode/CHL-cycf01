@@ -29,8 +29,8 @@ public class CheckliteSolution {
         catalog.put(ITEM_C.getSku(), ITEM_C);
         catalog.put(ITEM_D.getSku(), ITEM_D);
 
-        ITEM_A.setSpecialOffer(SPECIAL_OFFER_ITEM_A);
-        ITEM_B.setSpecialOffer(SPECIAL_OFFER_ITEM_B);
+        ITEM_A.addSpecialOffer(SPECIAL_OFFER_ITEM_A);
+        ITEM_B.addSpecialOffer(SPECIAL_OFFER_ITEM_B);
     }
 
     public Integer checklite(String skus) {
@@ -75,10 +75,10 @@ public class CheckliteSolution {
     }
 
     private boolean discountApplies(Map<Character, Integer> quantityBySku, Item item) {
-        if (item.getSpecialOffer() != null) {
+        if (item.hasSpecialOffers()) {
             Integer quantity = quantityBySku.get(item.getSku());
 
-            return quantity == item.getSpecialOffer().getQuantity();
+            return quantity == item.getSpecialOffers().getQuantity();
         }
         return false;
     }
@@ -88,6 +88,7 @@ public class CheckliteSolution {
         return priceWithoutDiscount - item.getSpecialOffer().getPrice();
     }
 }
+
 
 
 
