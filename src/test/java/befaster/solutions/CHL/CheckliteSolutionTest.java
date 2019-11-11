@@ -29,7 +29,7 @@ public class CheckliteSolutionTest {
     }
 
     @Parameterized.Parameter
-    public String items;
+    public String itemsInBasket;
 
     @Parameterized.Parameter(1)
     public Integer expectedTotal;
@@ -42,7 +42,7 @@ public class CheckliteSolutionTest {
     }
 
     @Test
-    public void shouldCalculateTotalOfItemsInBasket(String itemsInBasket, Integer expectedTotal) {
+    public void shouldCalculateTotalOfItemsInBasket() {
         Integer checkoutValue = checkliteSolution.checklite(itemsInBasket);
 
         Assert.assertEquals(expectedTotal, checkoutValue);
@@ -114,6 +114,7 @@ public class CheckliteSolutionTest {
     }
     */
 }
+
 
 
 
