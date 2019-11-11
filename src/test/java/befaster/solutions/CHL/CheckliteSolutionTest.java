@@ -18,7 +18,10 @@ public class CheckliteSolutionTest {
             {"A", Integer.valueOf(50)},
             {"ABCD", Integer.valueOf(115)},
             {"AAA", Integer.valueOf(130)},
+                {"ABCD", Integer.valueOf(115)},
                 {"AAAAA", Integer.valueOf(200)},
+                {"AAAAAA", Integer.valueOf(260)},
+                {"BB", Integer.valueOf(45)},
                 {null, Integer.valueOf(-1)},
                 {"!", Integer.valueOf(-1)}
         });
@@ -38,6 +41,15 @@ public class CheckliteSolutionTest {
         Assert.assertEquals(Integer.valueOf(0), checkoutValue);
     }
 
+    @Test
+    public void shouldCalculateTotalOfItemsInBasket(String items) {
+        String basket = ;
+        Integer checkoutValue = checkliteSolution.checklite(items);
+
+        Assert.assertEquals(, checkoutValue);
+    }
+
+    /*
     @Test
     public void shouldCalculateTotalWithItemInBasket() {
         String basket = "A";
@@ -101,7 +113,9 @@ public class CheckliteSolutionTest {
 
         Assert.assertEquals(Integer.valueOf(-1), returnedValue);
     }
+    */
 }
+
 
 
 
