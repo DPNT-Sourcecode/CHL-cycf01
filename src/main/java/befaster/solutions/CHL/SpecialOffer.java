@@ -2,7 +2,7 @@ package befaster.solutions.CHL;
 
 import java.util.Comparator;
 
-public class SpecialOffer implements Comparator<SpecialOffer> {
+public class SpecialOffer implements Comparable<SpecialOffer> {
 
     private int quantity;
     private Integer price;
@@ -31,9 +31,8 @@ public class SpecialOffer implements Comparator<SpecialOffer> {
     }
 
     @Override
-    public int compare(SpecialOffer o1, SpecialOffer o2) {
-        return o1.ranking - o2.ranking;
+    public int compareTo(SpecialOffer other) {
+        return this.ranking - other.ranking;
     }
+
 }
-
-

@@ -118,17 +118,13 @@ public class CheckliteSolution {
     private SpecialOffer getBestOfferApplicableFor(Item item, int numberOfItems) {
         if(item.hasSpecialOffers()) {
             List<SpecialOffer> specialOffers = item.getSpecialOffers();
-            specialOffers
+            Collections.sort(specialOffers);
+
+            for(SpecialOffer specialOffer : specialOffers) {
+                
+            }
         }
 
         return null;
     }
 }
-
-
-
-
-
-
-
-
