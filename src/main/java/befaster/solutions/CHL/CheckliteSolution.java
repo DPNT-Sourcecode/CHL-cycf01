@@ -25,6 +25,9 @@ public class CheckliteSolution {
         catalog.put(ITEM_B.getSku(), ITEM_B);
         catalog.put(ITEM_C.getSku(), ITEM_C);
         catalog.put(ITEM_D.getSku(), ITEM_D);
+
+        ITEM_A.setSpecialOffer(SPECIAL_OFFER_ITEM_A);
+        ITEM_B.setSpecialOffer(SPECIAL_OFFER_ITEM_B);
     }
 
     public Integer checklite(String skus) {
@@ -58,10 +61,11 @@ public class CheckliteSolution {
     }
 
     private Integer getDiscountFor(Item item) {
-        Integer priceWithoutDiscount = item.getSpecialOffer().getQuantity();
-        return null;
+        Integer priceWithoutDiscount = item.getSpecialOffer().getQuantity() * item.getPrice();
+        return priceWithoutDiscount - item.getSpecialOffer().getPrice();
     }
 }
+
 
 
 
