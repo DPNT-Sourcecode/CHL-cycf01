@@ -52,14 +52,6 @@ public class CheckliteSolution {
                 }
                 Integer quantityForThisSku = quantityByItem.get(item);
                 quantityByItem.put(item, ++quantityForThisSku);
-
-
-                /*
-                if (discountApplies(quantityBySku, item)) {
-                    total -= getDiscountFor(item);
-                    quantityBySku.put(sku, 0);
-                }
-                */
             }
         }
 
@@ -82,24 +74,12 @@ public class CheckliteSolution {
         return !catalog.containsKey(sku);
     }
 
-    /*
-    private boolean discountApplies(Map<Character, Integer> quantityBySku, Item item) {
-        if (item.hasSpecialOffers()) {
-            Integer quantity = quantityBySku.get(item.getSku());
-
-            SpecialOffer specialOffer = item.getSpecialOffers().get(0);
-            return quantity == specialOffer.getQuantity();
-        }
-        return false;
-    }
-    */
-
     private Integer totalForItem(Item item, int quantity) {
         int total = 0;
         int numberOfItemUnitsLeft = quantity;
         SpecialOffer bestOfferApplicable;
         do {
-            bestOfferApplicable = getBestOfferApplicableFor(item, quantity);
+            bestOfferApplicable = getBestOfferApplicableFor(item, numberOfItemUnitsLeft);
             if(bestOfferApplicable != null) {
                 numberOfItemUnitsLeft -= bestOfferApplicable.getQuantity();
                 total += bestOfferApplicable.getPrice();
@@ -108,14 +88,6 @@ public class CheckliteSolution {
 
         return total + numberOfItemUnitsLeft * item.getPrice();
     }
-
-    /*
-    private Integer getDiscountFor(Item item) {
-        SpecialOffer specialOffer = item.getSpecialOffers().get(0);
-        Integer priceWithoutDiscount = specialOffer.getQuantity() * item.getPrice();
-        return priceWithoutDiscount - specialOffer.getPrice();
-    }
-    */
 
     private SpecialOffer getBestOfferApplicableFor(Item item, int numberOfItems) {
         if(item.hasSpecialOffers()) {
@@ -132,6 +104,7 @@ public class CheckliteSolution {
         return null;
     }
 }
+
 
 
 
