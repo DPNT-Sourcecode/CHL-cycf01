@@ -37,22 +37,28 @@ public class CheckliteSolution {
             Item item = catalog.get(sku);
             if(item != null) {
                 total += item.getPrice();
-            }
 
-            if(discountApplies(quantityBySku, sku)) {
-                total -= getDiscountFor(sku);
+                if (discountApplies(quantityBySku, sku)) {
+                    total -= getDiscountFor(sku);
+                }
             }
         }
 
         return total;
     }
 
-    private boolean discountApplies(Map<Character, Integer> quantityBySku, char sku) {
-        Integer quantity = quantityBySku.get(sku);
-        if()
+    private boolean discountApplies(Map<Character, Integer> quantityBySku, Item item) {
+        if (item.getSpecialOffer() != null) {
+            Integer quantity = quantityBySku.get(item.getSku());
+
+            if (quantity == catalog.get(item).getSpecialOffer().getQuantity()) {
+
+            }
+        }
         return false;
     }
 }
+
 
 
 

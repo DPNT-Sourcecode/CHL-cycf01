@@ -9,4 +9,13 @@ public class SpecialOffer {
         this.quantity = quantity;
         this.price = price;
     }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public Integer getPrice() {
+        return price;
+    }
 }
+

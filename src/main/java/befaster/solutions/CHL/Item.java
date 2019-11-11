@@ -19,7 +19,12 @@ public class Item {
         return price;
     }
 
+    public SpecialOffer getSpecialOffer() {
+        return specialOffer;
+    }
+
     public void setSpecialOffer(SpecialOffer specialOffer) {
         this.specialOffer = specialOffer;
     }
 }
+
