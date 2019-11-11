@@ -12,7 +12,6 @@ public class HelloSolutionTest {
     public void shouldSayHelloWorld() {
         String friendName = "Luis";
         String returnedMessage = sut.hello(friendName);
-        assertEquals("Hello, Luis", returnedMessage);
+        assertEquals("Hello, World!", returnedMessage);
     }
 }
-
