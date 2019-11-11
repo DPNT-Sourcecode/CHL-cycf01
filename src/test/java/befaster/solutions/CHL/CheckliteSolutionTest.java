@@ -6,10 +6,18 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
+import java.util.Arrays;
 import java.util.Set;
 
 @RunWith(Parameterized.class)
 public class CheckliteSolutionTest {
+
+    @Parameterized.Parameters
+    public static Iterable<Object[]> {
+        return Arrays.asList(new Object[]) {
+            
+        }
+    }
 
     private CheckliteSolution checkliteSolution;
     private Set<Item> items;
@@ -97,4 +105,5 @@ public class CheckliteSolutionTest {
         Assert.assertEquals(Integer.valueOf(-1), returnedValue);
     }
 }
+
 
