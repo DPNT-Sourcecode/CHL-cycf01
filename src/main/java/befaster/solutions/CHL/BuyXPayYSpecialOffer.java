@@ -3,11 +3,12 @@ package befaster.solutions.CHL;
 import java.util.Map;
 
 public class BuyXPayYSpecialOffer extends SpecialOffer implements Comparable<BuyXPayYSpecialOffer>{
+    private char sku;
     private int quantity;
     private Integer price;
     private int ranking;
 
-    public BuyXPayYSpecialOffer(int quantity, Integer price) {
+    public BuyXPayYSpecialOffer(char sku, int quantity, Integer price) {
         this(quantity, price, 1);
     }
 
@@ -39,6 +40,7 @@ public class BuyXPayYSpecialOffer extends SpecialOffer implements Comparable<Buy
         return this.ranking - other.ranking;
     }
 }
+
 
 
 
