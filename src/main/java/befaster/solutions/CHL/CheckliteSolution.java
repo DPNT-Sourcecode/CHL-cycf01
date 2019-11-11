@@ -60,15 +60,19 @@ public class CheckliteSolution {
                 Integer quantityForThisSku = quantityBySku.get(sku);
                 quantityBySku.put(sku, ++quantityForThisSku);
 
-                
+
+                /*
                 if (discountApplies(quantityBySku, item)) {
                     total -= getDiscountFor(item);
                     quantityBySku.put(sku, 0);
                 }
+                */
             }
-
-
         }
+
+        // Apply offers
+        
+
         return total;
     }
 
@@ -102,5 +106,6 @@ public class CheckliteSolution {
         return null;
     }
 }
+
 
 
