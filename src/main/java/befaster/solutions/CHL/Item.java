@@ -1,7 +1,5 @@
 package befaster.solutions.CHL;
 
-import java.math.BigDecimal;
-
 public class Item {
 
     private String sku;
@@ -29,4 +27,5 @@ public class Item {
         this.price = price;
     }
 }
+
 

@@ -37,5 +37,14 @@ public class CheckliteSolutionTest {
 
         Assert.assertEquals(Integer.valueOf(50), checkoutValue);
     }
+
+    @Test
+    public void shouldCalculateTotalWithMoreThanOneItemInBasket() {
+        String basket = "ABCD";
+        Integer checkoutValue = checkliteSolution.checklite(basket);
+
+        Assert.assertEquals(Integer.valueOf(115), checkoutValue);
+    }
 }
+
 
