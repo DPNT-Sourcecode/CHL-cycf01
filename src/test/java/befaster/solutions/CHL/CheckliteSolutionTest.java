@@ -72,6 +72,15 @@ public class CheckliteSolutionTest {
 
         Assert.assertEquals(Integer.valueOf(260), checkoutValue);
     }
+
+    @Test
+    public void shouldReturnMinusOneIfInputIsInvalid() {
+        String invalidInput = "!";
+        Integer returnedValue = checkliteSolution.checklite(invalidInput);
+
+        Assert.assertEquals(Integer.valueOf(-1), returnedValue);
+    }
 }
+
 
 
