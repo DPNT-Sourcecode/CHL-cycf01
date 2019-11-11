@@ -38,8 +38,9 @@ public class CheckliteSolution {
             if(item != null) {
                 total += item.getPrice();
 
-                if (discountApplies(quantityBySku, sku)) {
-                    total -= getDiscountFor(sku);
+                if (discountApplies(quantityBySku, item)) {
+                    total -= getDiscountFor(item);
+                    quantityBySku.put(sku, 0);
                 }
             }
         }
@@ -51,13 +52,17 @@ public class CheckliteSolution {
         if (item.getSpecialOffer() != null) {
             Integer quantity = quantityBySku.get(item.getSku());
 
-            if (quantity == catalog.get(item).getSpecialOffer().getQuantity()) {
-
-            }
+            return quantity == catalog.get(item).getSpecialOffer().getQuantity();
         }
         return false;
     }
+
+    private Integer getDiscountFor(Item item) {
+        Integer priceWithoutDiscount = item.getSpecialOffer().getQuantity();
+        return null;
+    }
 }
+
 
 
 
