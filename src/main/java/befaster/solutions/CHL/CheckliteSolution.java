@@ -78,12 +78,6 @@ public class CheckliteSolution {
         return total;
     }
 
-    private Integer totalForItem(Character sku, int quantity) {
-        
-
-        return null;
-    }
-
     private boolean inputIsInvalid(String input) {
         return input == null;
     }
@@ -104,17 +98,24 @@ public class CheckliteSolution {
     }
     */
 
+    private Integer totalForItem(Item item, int quantity) {
+        SpecialOffer specialOffer = getBestOfferApplicableFor(item, quantity);
+
+        return null;
+    }
+
     private Integer getDiscountFor(Item item) {
         SpecialOffer specialOffer = item.getSpecialOffers().get(0);
         Integer priceWithoutDiscount = specialOffer.getQuantity() * item.getPrice();
         return priceWithoutDiscount - specialOffer.getPrice();
     }
 
-    private SpecialOffer getBestOfferApplicableFor(Item item) {
+    private SpecialOffer getBestOfferApplicableFor(Item item, int numberOfItems) {
 
         return null;
     }
 }
+
 
 
 
