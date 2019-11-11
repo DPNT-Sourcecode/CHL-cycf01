@@ -66,7 +66,7 @@ public class CheckliteSolution {
         }
 
         // Apply offers and calculate total
-        
+
 
         Integer total = 0;
         Iterator<Map.Entry<Item, Integer>> iterator = quantityByItem.entrySet().iterator();
@@ -118,6 +118,7 @@ public class CheckliteSolution {
         return null;
     }
 }
+
 
 
 
