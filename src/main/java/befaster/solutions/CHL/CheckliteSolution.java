@@ -8,8 +8,8 @@ public class CheckliteSolution {
 
     private Set<Item> catalog;
 
-    public CheckliteSolution(Set<Item> catalog) {
-        this.catalog = catalog;
+    public CheckliteSolution() {
+        //this.catalog = catalog;
     }
 
     public Integer checklite(String skus) {
@@ -24,8 +24,3 @@ public class CheckliteSolution {
         return total;
     }
 }
-
-
-
-
-

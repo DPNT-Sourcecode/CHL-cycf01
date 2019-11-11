@@ -19,7 +19,7 @@ public class CheckliteSolutionTest {
         items = new HashSet<Item>();
         Item itemA = mock(Item.class);
         items.add(itemA);
-        checkliteSolution = new CheckliteSolution(items);
+        checkliteSolution = new CheckliteSolution();
     }
 
     @Test
@@ -28,7 +28,6 @@ public class CheckliteSolutionTest {
         Assert.assertEquals(Integer.valueOf(0), checkoutValue);
     }
 
-    /*
     @Test
     public void shouldCalculateTotalWithOneItemInBasket() {
         String basket = "A";
@@ -36,8 +35,4 @@ public class CheckliteSolutionTest {
 
         Assert.assertEquals(Integer.valueOf(50), checkoutValue);
     }
-    */
 }
-
-
-
