@@ -5,10 +5,10 @@ import java.math.BigDecimal;
 public class Item {
 
     private String sku;
-    private BigDecimal price;
+    private Integer price;
     private SpecialOffer specialOffer;
 
-    public Item(String sku, BigDecimal price) {
+    public Item(String sku, Integer price) {
         this.sku = sku;
         this.price = price;
     }
@@ -21,11 +21,12 @@ public class Item {
         this.sku = sku;
     }
 
-    public BigDecimal getPrice() {
+    public Integer getPrice() {
         return price;
     }
 
-    public void setPrice(BigDecimal price) {
+    public void setPrice(Integer price) {
         this.price = price;
     }
 }
+
