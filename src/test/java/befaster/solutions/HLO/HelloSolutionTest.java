@@ -9,9 +9,12 @@ public class HelloSolutionTest {
     private HelloSolution sut = new HelloSolution();
 
     @Test
-    public void shouldSayHelloWorld() {
+    public void shouldSayHelloToFriendNamePassed() {
         String friendName = "Luis";
         String returnedMessage = sut.hello(friendName);
-        assertEquals("Hello, World!", returnedMessage);
+
+        String expectedMessage = "Hello, " + friendName + "!";
+        assertEquals(expectedMessage, returnedMessage);
     }
 }
+
