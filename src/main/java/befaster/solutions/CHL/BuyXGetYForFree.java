@@ -6,12 +6,12 @@ public class BuyXGetYForFree extends SpecialOffer {
 
     private char sku;
     private int quantity;
-    private char skuOfFreeItem;
+    private char targetSKU;
 
-    public BuyXGetYForFree(char sku, int quantity, char skuOfFreeItem) {
+    public BuyXGetYForFree(char sku, int quantity, char targetSKU) {
         this.sku = sku;
         this.quantity = quantity;
-        this.skuOfFreeItem = skuOfFreeItem;
+        this.targetSKU = targetSKU;
     }
 
     public char getSku() {
@@ -22,13 +22,8 @@ public class BuyXGetYForFree extends SpecialOffer {
         return quantity;
     }
 
-    public char getSkuOfFreeItem() {
-        return skuOfFreeItem;
-    }
-
     @Override
     public void apply(Map<Item, Integer> quantityByItem) {
 
     }
 }
-

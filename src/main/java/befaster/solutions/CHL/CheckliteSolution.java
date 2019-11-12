@@ -120,8 +120,3 @@ public class CheckliteSolution {
         return null;
     }
 }
-
-
-
-
-
