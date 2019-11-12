@@ -1,6 +1,7 @@
 package befaster.solutions.CHL;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class CheckliteSolution {
 
@@ -85,13 +86,14 @@ public class CheckliteSolution {
     }
 
 
-
     private Integer totalForItem(Item item, int quantity, Map<Item, Integer> quantityByItem) {
         int total = 0;
         int numberOfItemUnitsLeft = quantity;
         SpecialOffer bestOfferApplicable;
 
-        offers.stream().filter(o -> o.)
+        List<SpecialOffer> offersForItem = offers.stream()
+                .filter(o -> item.getSku() == o.getTargetSKU())
+                .collect(Collectors.toList());
 
 
         do {
@@ -120,4 +122,5 @@ public class CheckliteSolution {
         return null;
     }
 }
+
 
