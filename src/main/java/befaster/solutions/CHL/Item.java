@@ -1,14 +1,12 @@
 package befaster.solutions.CHL;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
 public class Item {
 
     private char sku;
     private Integer price;
-    private List<SpecialOffer> specialOffers;
+    //private List<SpecialOffer> specialOffers;
 
     public Item(char sku, Integer price) {
         this.sku = sku;
@@ -23,6 +21,7 @@ public class Item {
         return price;
     }
 
+    /*
     public boolean hasSpecialOffers() {
         return specialOffers != null && specialOffers.size() > 0;
     }
@@ -37,6 +36,7 @@ public class Item {
         }
         this.specialOffers.add(specialOffer);
     }
+    */
 
     @Override
     public boolean equals(Object o) {
@@ -51,3 +51,4 @@ public class Item {
         return Objects.hash(sku);
     }
 }
+

@@ -107,7 +107,7 @@ public class CheckliteSolution {
 
     private SpecialOffer getBestOfferApplicableFor(Item item, int numberOfItemUnitsLeft, Map<Item, Integer> quantityByItem) {
         List<SpecialOffer> applicableOffers = offers.stream()
-                .filter(o -> item.getSku() == o.getTargetSKU())
+                .filter(o -> item.getSku() == o.getSku())
                 .collect(Collectors.toList());
         //.forEach(o -> o.apply(quantityByItem));
 
@@ -127,3 +127,4 @@ public class CheckliteSolution {
         return null;
     }
 }
+
