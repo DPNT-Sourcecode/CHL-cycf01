@@ -66,8 +66,6 @@ public class CheckliteSolution {
         }
 
         // Apply offers and calculate total
-
-
         Integer total = 0;
         Iterator<Map.Entry<Item, Integer>> iterator = quantityByItem.entrySet().iterator();
         while(iterator.hasNext()) {
@@ -92,6 +90,10 @@ public class CheckliteSolution {
         int total = 0;
         int numberOfItemUnitsLeft = quantity;
         SpecialOffer bestOfferApplicable;
+
+        offers.
+
+
         do {
             bestOfferApplicable = getBestOfferApplicableFor(item, numberOfItemUnitsLeft, quantityByItem);
             if(bestOfferApplicable != null) {
@@ -118,6 +120,7 @@ public class CheckliteSolution {
         return null;
     }
 }
+
 
 
 
