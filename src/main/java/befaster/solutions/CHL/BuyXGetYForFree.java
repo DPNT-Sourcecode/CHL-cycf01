@@ -26,5 +26,3 @@ public class BuyXGetYForFree extends SpecialOffer {
 
     }
 }
-
-

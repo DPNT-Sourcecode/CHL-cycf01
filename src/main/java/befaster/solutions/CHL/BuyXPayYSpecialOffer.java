@@ -40,4 +40,3 @@ public class BuyXPayYSpecialOffer extends SpecialOffer implements Comparable<Buy
         return this.ranking - other.ranking;
     }
 }
-
