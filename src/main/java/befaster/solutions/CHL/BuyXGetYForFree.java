@@ -3,7 +3,6 @@ package befaster.solutions.CHL;
 import java.util.Map;
 
 public class BuyXGetYForFree extends SpecialOffer {
-
     private char sku;
     private int quantity;
 
@@ -26,4 +25,5 @@ public class BuyXGetYForFree extends SpecialOffer {
 
     }
 }
+
 
