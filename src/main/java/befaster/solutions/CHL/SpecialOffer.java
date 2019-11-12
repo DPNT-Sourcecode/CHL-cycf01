@@ -23,6 +23,3 @@ public abstract class SpecialOffer {
     public abstract void apply(Map<ItemAtPrice, Integer> quantityByItem);
 
 }
-
-
-

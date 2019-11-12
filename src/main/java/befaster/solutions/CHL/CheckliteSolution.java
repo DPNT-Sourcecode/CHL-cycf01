@@ -37,12 +37,6 @@ public class CheckliteSolution {
         offers.add(SPECIAL_OFFER_ITEM_A_2);
         offers.add(SPECIAL_OFFER_ITEM_B);
         offers.add(SPECIAL_OFFER_ITEM_E);
-
-        /*
-        ITEM_A.addSpecialOffer(SPECIAL_OFFER_ITEM_A_1);
-        ITEM_A.addSpecialOffer(SPECIAL_OFFER_ITEM_A_2);
-        ITEM_B.addSpecialOffer(SPECIAL_OFFER_ITEM_B);
-        */
     }
 
     public Integer checklite(String skus) {
@@ -133,9 +127,3 @@ public class CheckliteSolution {
         return null;
     }
 }
-
-
-
-
-
-

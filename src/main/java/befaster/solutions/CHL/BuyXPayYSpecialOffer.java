@@ -11,14 +11,9 @@ public class BuyXPayYSpecialOffer extends SpecialOffer implements Comparable<Buy
     }
 
     public BuyXPayYSpecialOffer(char sku, int quantity, Integer price, int ranking) {
-        super(sku);
-        this.quantity = quantity;
+        super(sku, quantity);
         this.price = price;
         this.ranking = ranking;
-    }
-
-    public int getQuantity() {
-        return quantity;
     }
 
     public Integer getPrice() {
@@ -39,5 +34,3 @@ public class BuyXPayYSpecialOffer extends SpecialOffer implements Comparable<Buy
         return this.ranking - other.ranking;
     }
 }
-
-
