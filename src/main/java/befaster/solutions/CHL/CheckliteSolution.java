@@ -94,8 +94,8 @@ public class CheckliteSolution {
         do {
             bestOfferApplicable = getBestOfferApplicableFor(item, numberOfItemUnitsLeft, quantityByItem);
             if(bestOfferApplicable != null) {
-                numberOfItemUnitsLeft -= bestOfferApplicable.getQuantity();
-                total += bestOfferApplicable.getPrice();
+                //numberOfItemUnitsLeft -= bestOfferApplicable.getQuantity();
+                //total += bestOfferApplicable.getPrice();
             }
         } while (bestOfferApplicable != null);
 
@@ -108,7 +108,7 @@ public class CheckliteSolution {
                 .forEach(o -> o.apply(quantityByItem));
 
 
-        if(item.hasSpecialOffers()) {
+        //if(item.hasSpecialOffers()) {
             List<SpecialOffer> specialOffers = item.getSpecialOffers();
             Collections.sort(specialOffers);
 
@@ -117,11 +117,12 @@ public class CheckliteSolution {
                     return specialOffer;
                 }
             }
-        }
+        //}
 
         return null;
     }
 }
+
 
 
 
