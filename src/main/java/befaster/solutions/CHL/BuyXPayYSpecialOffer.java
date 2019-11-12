@@ -31,7 +31,7 @@ public class BuyXPayYSpecialOffer extends SpecialOffer implements Comparable<Buy
     }
 
     @Override
-    public void apply(Map<Item, Integer> quantityByItem) {
+    public void apply(Map<ItemAtPrice, Integer> quantityByItem) {
 
     }
 
@@ -40,3 +40,4 @@ public class BuyXPayYSpecialOffer extends SpecialOffer implements Comparable<Buy
         return this.ranking - other.ranking;
     }
 }
+

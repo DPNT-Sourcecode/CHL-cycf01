@@ -22,7 +22,8 @@ public class BuyXGetYForFree extends SpecialOffer {
     }
 
     @Override
-    public void apply(Map<Item, Integer> quantityByItem) {
+    public void apply(Map<ItemAtPrice, Integer> quantityByItem) {
 
     }
 }
+

@@ -14,6 +14,7 @@ public abstract class SpecialOffer {
         return targetSKU;
     }
 
-    public abstract void apply(Map<Item, Integer> quantityByItem);
+    public abstract void apply(Map<ItemAtPrice, Integer> quantityByItem);
 
 }
+
