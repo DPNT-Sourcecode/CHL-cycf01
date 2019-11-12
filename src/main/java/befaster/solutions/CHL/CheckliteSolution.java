@@ -66,14 +66,16 @@ public class CheckliteSolution {
                 quantityByItem.put(item, ++quantityForThisSku);
             }
         }
-        
-
 
         // Apply offers and calculate total
         Integer total = 0;
         Iterator<Map.Entry<Item, Integer>> iterator = quantityByItem.entrySet().iterator();
         while(iterator.hasNext()) {
-            Map.Entry<Item, Integer> itemAndQuantityEntry = iterator.next();
+            Map.Entry<Item, Integer> itemQuantity = iterator.next();
+            ItemAtPrice itemAtPrice = new ItemAtPrice(itemQuantity.getKey().getSku(), itemQuantity.getKey().getPrice());
+            quantityByItemPrice.put(itemAtPrice, itemQuantity.getValue());
+
+            Map.Entry<Item, Integer> itemAndQuantityEntry = itemQuantity;
             total += totalForItem(itemAndQuantityEntry.getKey(), itemAndQuantityEntry.getValue(), quantityByItem);
         }
 
@@ -127,6 +129,7 @@ public class CheckliteSolution {
         return null;
     }
 }
+
 
 
 
