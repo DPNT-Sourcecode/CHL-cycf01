@@ -91,7 +91,7 @@ public class CheckliteSolution {
         int numberOfItemUnitsLeft = quantity;
         SpecialOffer bestOfferApplicable;
 
-        offers.
+        offers.stream().filter(o -> o.)
 
 
         do {
@@ -120,3 +120,4 @@ public class CheckliteSolution {
         return null;
     }
 }
+

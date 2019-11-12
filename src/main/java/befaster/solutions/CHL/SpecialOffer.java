@@ -10,7 +10,12 @@ public abstract class SpecialOffer {
         this.targetSKU = targetSKU;
     }
 
+    public char getTargetSKU() {
+        return targetSKU;
+    }
+
     public abstract void apply(Map<Item, Integer> quantityByItem);
 
 }
+
 
