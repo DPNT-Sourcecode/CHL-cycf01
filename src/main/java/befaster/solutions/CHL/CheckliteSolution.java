@@ -109,19 +109,21 @@ public class CheckliteSolution {
         //.forEach(o -> o.apply(quantityByItem));
 
 
-        if(applicableOffers != null && applicableOffers.size() > 0) {
+        if (applicableOffers != null && applicableOffers.size() > 0) {
             //List<SpecialOffer> specialOffers = item.getSpecialOffers();
             //Collections.sort(applicableOffers);
 
-            for(SpecialOffer specialOffer : applicableOffers) {
-                if(quantityByItem >= specialOffer.getQuantity()) {
+            for (SpecialOffer specialOffer : applicableOffers) {
+                if (quantityByItem >= specialOffer.getQuantity()) {
                     return specialOffer;
                 }
             }
-        //}
-
+            //}
+            
+        }
         return null;
     }
 }
+
 
 
