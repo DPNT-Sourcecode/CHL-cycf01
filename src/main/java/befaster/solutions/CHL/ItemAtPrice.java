@@ -2,12 +2,12 @@ package befaster.solutions.CHL;
 
 import java.util.Objects;
 
-public class ItemPrice {
+public class ItemAtPrice {
 
     private char sku;
     private Integer price;
 
-    public ItemPrice(char sku, Integer price) {
+    public ItemAtPrice(char sku, Integer price) {
         this.sku = sku;
         this.price = price;
     }
@@ -16,9 +16,9 @@ public class ItemPrice {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        ItemPrice itemPrice = (ItemPrice) o;
-        return sku == itemPrice.sku &&
-                Objects.equals(price, itemPrice.price);
+        ItemAtPrice itemAtPrice = (ItemAtPrice) o;
+        return sku == itemAtPrice.sku &&
+                Objects.equals(price, itemAtPrice.price);
     }
 
     @Override
@@ -26,5 +26,3 @@ public class ItemPrice {
         return Objects.hash(sku, price);
     }
 }
-
-
