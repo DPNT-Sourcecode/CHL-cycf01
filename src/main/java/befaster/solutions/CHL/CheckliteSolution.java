@@ -91,9 +91,11 @@ public class CheckliteSolution {
         int numberOfItemUnitsLeft = quantity;
         SpecialOffer bestOfferApplicable;
 
-        List<SpecialOffer> offersForItem = offers.stream()
+        offers.stream()
                 .filter(o -> item.getSku() == o.getTargetSKU())
-                .collect(Collectors.toList());
+                .forEach(o -> o.apply(quantityByItem));
+
+
 
 
         do {
@@ -122,5 +124,6 @@ public class CheckliteSolution {
         return null;
     }
 }
+
 
 
