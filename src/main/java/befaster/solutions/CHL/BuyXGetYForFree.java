@@ -9,6 +9,7 @@ public class BuyXGetYForFree extends SpecialOffer {
     private char targetSKU;
 
     public BuyXGetYForFree(char sku, int quantity, char targetSKU) {
+        super(targetSKU);
         this.sku = sku;
         this.quantity = quantity;
         this.targetSKU = targetSKU;
@@ -27,3 +28,4 @@ public class BuyXGetYForFree extends SpecialOffer {
 
     }
 }
+
