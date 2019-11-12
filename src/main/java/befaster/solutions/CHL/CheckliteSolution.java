@@ -65,10 +65,7 @@ public class CheckliteSolution {
                 quantityByItem.put(item, ++quantityForThisSku);
             }
         }
-
         
-
-
 
 
         // Apply offers and calculate total
@@ -129,4 +126,5 @@ public class CheckliteSolution {
         return null;
     }
 }
+
 
