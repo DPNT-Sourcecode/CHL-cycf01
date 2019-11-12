@@ -103,17 +103,18 @@ public class CheckliteSolution {
     }
 
     private SpecialOffer getBestOfferApplicableFor(Item item, int numberOfItemUnitsLeft, Map<Item, Integer> quantityByItem) {
-        offers.stream()
+        List<SpecialOffer> applicableOffers = offers.stream()
                 .filter(o -> item.getSku() == o.getTargetSKU())
-                .forEach(o -> o.apply(quantityByItem));
+                .collect(Collectors.toList());
+        //.forEach(o -> o.apply(quantityByItem));
 
 
-        //if(item.hasSpecialOffers()) {
+        if(applicableOffers != null && applicableOffers.size() > 0) {
             //List<SpecialOffer> specialOffers = item.getSpecialOffers();
-            //Collections.sort(specialOffers);
+            //Collections.sort(applicableOffers);
 
-            for(SpecialOffer specialOffer : specialOffers) {
-                if(numberOfItems >= specialOffer.getQuantity()) {
+            for(SpecialOffer specialOffer : applicableOffers) {
+                if(quantityByItem >= specialOffer.getQuantity()) {
                     return specialOffer;
                 }
             }
@@ -122,4 +123,5 @@ public class CheckliteSolution {
         return null;
     }
 }
+
 
