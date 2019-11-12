@@ -18,6 +18,7 @@ public class CheckliteSolution {
 
     private Map<Character, Item> catalog;
     private Map<Character, List<SpecialOffer>> offersBySKU;
+    private Map<ItemPrice, Integer> quantityByItemPrice;
     private List<SpecialOffer> offers;
 
     public CheckliteSolution() {
@@ -63,9 +64,10 @@ public class CheckliteSolution {
                 }
                 Integer quantityForThisSku = quantityByItem.get(item);
                 quantityByItem.put(item, ++quantityForThisSku);
+
             }
         }
-        
+
 
 
         // Apply offers and calculate total
@@ -126,5 +128,6 @@ public class CheckliteSolution {
         return null;
     }
 }
+
 
 
