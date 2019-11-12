@@ -109,8 +109,8 @@ public class CheckliteSolution {
 
 
         //if(item.hasSpecialOffers()) {
-            List<SpecialOffer> specialOffers = item.getSpecialOffers();
-            Collections.sort(specialOffers);
+            //List<SpecialOffer> specialOffers = item.getSpecialOffers();
+            //Collections.sort(specialOffers);
 
             for(SpecialOffer specialOffer : specialOffers) {
                 if(numberOfItems >= specialOffer.getQuantity()) {
@@ -122,3 +122,4 @@ public class CheckliteSolution {
         return null;
     }
 }
+
