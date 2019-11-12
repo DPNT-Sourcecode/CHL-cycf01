@@ -3,21 +3,16 @@ package befaster.solutions.CHL;
 import java.util.Map;
 
 public class BuyXGetYForFree extends SpecialOffer {
-    private char sku;
-    private int quantity;
+    private char targetSKU;
 
     public BuyXGetYForFree(char sku, int quantity, char targetSKU) {
-        super(targetSKU);
-        this.sku = sku;
-        this.quantity = quantity;
+        super(sku, quantity, targetSKU);
+        this.getTargetSKU() = targetSKU;
     }
 
-    public char getSku() {
-        return sku;
-    }
-
-    public int getQuantity() {
-        return quantity;
+    @Override
+    public char getTargetSKU() {
+        return targetSKU;
     }
 
     @Override
@@ -25,5 +20,6 @@ public class BuyXGetYForFree extends SpecialOffer {
 
     }
 }
+
 
 

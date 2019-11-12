@@ -5,19 +5,24 @@ import java.util.Map;
 public abstract class SpecialOffer {
 
     private int quantity;
-    private char targetSKU;
+    private char sku;
 
-    public SpecialOffer(int quantity, char targetSKU) {
+    public SpecialOffer(char sku, int quantity) {
+        this.sku = sku;
         this.quantity = quantity;
-        this.targetSKU = targetSKU;
     }
 
-    public char getTargetSKU() {
-        return targetSKU;
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public char getSku() {
+        return sku;
     }
 
     public abstract void apply(Map<ItemAtPrice, Integer> quantityByItem);
 
 }
+
 
 
